@@ -1,4 +1,4 @@
-name: Testing workflow variable
+name: Testing of workflow variable
 
 on:
   workflow_dispatch
