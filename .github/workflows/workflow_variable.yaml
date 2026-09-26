@@ -11,7 +11,7 @@ jobs:
       Greeting: Hello
     steps:
       - name: "Say Hello Rohit It's Monday"
-        run: echo '$Greeting $First_Name is using $cloud'
+        run: echo "$Greeting $First_Name is using $cloud"
         
         env:                                  # Scope of this variable is within this Step
           First_Name: Sachin
