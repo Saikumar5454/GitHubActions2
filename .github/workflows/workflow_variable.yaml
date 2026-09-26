@@ -1,0 +1,21 @@
+name: Testing workflow variable
+
+on:
+  workflow_dispatch
+env:                                           #global variable (scope is entire workflow)
+  cloud: google-cloud 
+jobs:
+  greeting_job:              
+    runs-on: ubuntu-latest
+    env:                                       # Scope of this variable is within this Job
+      Greeting: Hello
+    steps:
+      - name: "Say Hello Rohit It's Monday"
+        run: echo '$Greeting $First_Name is using $cloud'
+        
+        env:                                  # Scope of this variable is within this Step
+          First_Name: Sachin
+      
+  
+  
+    
